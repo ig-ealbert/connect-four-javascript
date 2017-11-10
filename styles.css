@@ -1,0 +1,22 @@
+.boardRow {
+	height: 110px;
+	width: 850px;
+}
+
+.boardRow > circle {
+	fill: lightgray;
+	stroke: lightgray;
+}
+
+#dropRow > circle {
+	fill: gray;
+	stroke: gray;
+}
+
+.greenBorder {
+	border: 2px solid green;
+}
+
+body {
+	background: lightblue;
+}
