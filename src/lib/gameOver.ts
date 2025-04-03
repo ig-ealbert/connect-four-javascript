@@ -95,7 +95,7 @@ function winDiagonalRight(row: number, column: number, gameState: number[][]) {
 }
 
 function getTurnColor(turn: number) {
-  return turn === 0 ? "black" : "white";
+  return turn === 0 ? "Black" : "White";
 }
 
 export function isGameOver(row: number, column: number, gameState: number[][], turn: number) {
