@@ -12,9 +12,7 @@ The game provides a 6 x 7 grid. The goal of each player is to create a horizonta
 npm run dev
 ```
 
-To place a token, click on the top-most row in the column you want. The color of the top row will change based on whose turn it is. Black goes first.
-
-In the previous implementation (HTML/CSS/JavaScript), the space in the top row would change color on hover based on the current turn. However, there isn't a straightforward way to do that in React, as the element's style cannot be set directly from the `onHover` event, as was previously done. The compromise is to set all of the spaces in the "drop" row to that color without hovering.
+To place a token, click on the top-most row in the column you want. Hovering over a slot on the top row will change it to the color of the current player to indicate you can drop a token there. Black goes first.
 
 ## Running the Unit Tests
 
