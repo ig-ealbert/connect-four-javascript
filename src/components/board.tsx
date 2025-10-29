@@ -11,6 +11,7 @@ import { getBoardValue } from "@/lib/value";
 
 export default function Board(params: boardParams) {
   const rows = [0, 1, 2, 3, 4, 5];
+  const cols = [0, 1, 2, 3, 4, 5, 6];
   const startingGameState = initializeGameState();
 
   const [turn, setTurn] = useState<number>(0);
@@ -48,48 +49,15 @@ export default function Board(params: boardParams) {
           <tr key={`row${rowNumber}`}>
             <td>
               <svg xmlns="http://www.w3.org/2000/svg" className="boardRow">
-                <Space
-                  x={55}
-                  column={0}
-                  onClick={() => null}
-                  value={getBoardValue(boardState, rowNumber, 0)}
-                />
-                <Space
-                  x={165}
-                  column={1}
-                  onClick={() => null}
-                  value={getBoardValue(boardState, rowNumber, 1)}
-                />
-                <Space
-                  x={275}
-                  column={2}
-                  onClick={() => null}
-                  value={getBoardValue(boardState, rowNumber, 2)}
-                />
-                <Space
-                  x={385}
-                  column={3}
-                  onClick={() => null}
-                  value={getBoardValue(boardState, rowNumber, 3)}
-                />
-                <Space
-                  x={495}
-                  column={4}
-                  onClick={() => null}
-                  value={getBoardValue(boardState, rowNumber, 4)}
-                />
-                <Space
-                  x={605}
-                  column={5}
-                  onClick={() => null}
-                  value={getBoardValue(boardState, rowNumber, 5)}
-                />
-                <Space
-                  x={715}
-                  column={6}
-                  onClick={() => null}
-                  value={getBoardValue(boardState, rowNumber, 6)}
-                />
+                {cols.map((colNumber) => (
+                  <Space
+                    key={`spaceRow${rowNumber}Col${colNumber}`}
+                    x={55 + 110 * colNumber}
+                    column={colNumber}
+                    onClick={() => null}
+                    value={getBoardValue(boardState, rowNumber, colNumber)}
+                  />
+                ))}
               </svg>
             </td>
           </tr>
