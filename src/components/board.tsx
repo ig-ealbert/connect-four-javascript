@@ -4,14 +4,12 @@ import { useState } from "react";
 import DropRow from "./dropRow";
 import Space from "./space";
 import { initializeGameState } from "@/lib/initialization";
-import { BOARD_ROWS, BOARD_COLS } from "@/constants";
+import { BOARD_ROWS, BOARD_COLS, rows, cols } from "@/constants";
 import { isGameOver } from "@/lib/gameOver";
 import { boardParams } from "@/types/boardParams";
 import { getBoardValue } from "@/lib/value";
 
 export default function Board(params: boardParams) {
-  const rows = [0, 1, 2, 3, 4, 5];
-  const cols = [0, 1, 2, 3, 4, 5, 6];
   const startingGameState = initializeGameState();
 
   const [turn, setTurn] = useState<number>(0);
