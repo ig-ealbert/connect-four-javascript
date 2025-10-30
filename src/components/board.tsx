@@ -45,21 +45,22 @@ export default function Board(params: boardParams) {
         />
         {rows.map((rowNumber) => (
           <tr key={`row${rowNumber}`}>
-            <td>
-              <svg xmlns="http://www.w3.org/2000/svg" className="boardRow">
-                {cols.map((colNumber) => (
+            {cols.map((colNumber) => (
+              <td
+                key={`spaceRow${rowNumber}Col${colNumber}`}
+                className={"board"}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="boardSpace">
                   <Space
-                    key={`spaceRow${rowNumber}Col${colNumber}`}
-                    x={55 + 110 * colNumber}
                     column={colNumber}
                     hoverOn={() => null}
                     hoverOff={() => null}
                     onClick={() => null}
                     value={getBoardValue(boardState, rowNumber, colNumber)}
                   />
-                ))}
-              </svg>
-            </td>
+                </svg>
+              </td>
+            ))}
           </tr>
         ))}
       </tbody>

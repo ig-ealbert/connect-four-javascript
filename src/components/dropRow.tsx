@@ -29,17 +29,15 @@ export default function DropRow(params: dropRowParams) {
 
   return (
     <tr>
-      <td>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="boardRow"
-          key="dropRow"
-          id="dropRow"
-        >
-          {cols.map((colNumber) => (
+      {cols.map((colNumber) => (
+        <td key={`dropSpaceCol${colNumber}`}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="boardSpace"
+            key="dropRow"
+            id="dropRow"
+          >
             <Space
-              key={`dropSpaceCol${colNumber}`}
-              x={55 + 110 * colNumber}
               column={colNumber}
               hoverOn={(event: React.MouseEvent) => activateHover(event)}
               hoverOff={(event: React.MouseEvent) => deactivateHover(event)}
@@ -47,9 +45,9 @@ export default function DropRow(params: dropRowParams) {
               turn={params.turn}
               value={2}
             />
-          ))}
-        </svg>
-      </td>
+          </svg>
+        </td>
+      ))}
     </tr>
   );
 }

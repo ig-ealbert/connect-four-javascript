@@ -1,6 +1,11 @@
 .boardRow {
   height: 80px;
-	width: 850px;
+	width: 800px;
+}
+
+.boardSpace {
+  height: 80px;
+  width: 90px;
 }
 
 #restartGame {
@@ -9,4 +14,12 @@
 
 body {
   background: lightblue;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td.board {
+  border: 5px black solid
 }

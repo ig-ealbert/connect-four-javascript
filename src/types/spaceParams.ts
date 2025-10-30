@@ -5,5 +5,4 @@ export type spaceParams = {
   onClick: (column: number) => void;
   turn?: number;
   value: number;
-  x: number;
 };
