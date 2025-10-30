@@ -52,6 +52,8 @@ export default function Board(params: boardParams) {
                     key={`spaceRow${rowNumber}Col${colNumber}`}
                     x={55 + 110 * colNumber}
                     column={colNumber}
+                    hoverOn={() => null}
+                    hoverOff={() => null}
                     onClick={() => null}
                     value={getBoardValue(boardState, rowNumber, colNumber)}
                   />
