@@ -3,6 +3,10 @@
 	width: 850px;
 }
 
+#restartGame {
+  margin: 5px;
+}
+
 body {
   background: lightblue;
 }

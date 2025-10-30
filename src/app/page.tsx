@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState } from "react";
 import Board from "@/components/board";
@@ -10,7 +10,13 @@ export default function Home() {
     <>
       <Board setMessage={setMessage} />
       <div id="buttonsAndMessage">
-        <input id="restartGame" type="button" value="Reset" onClick={() => window.location.reload()} />
+        <input
+          id="restartGame"
+          type="button"
+          value="Reset"
+          disabled={message === ""}
+          onClick={() => window.location.reload()}
+        />
         <label id="message">{message}</label>
       </div>
     </>
